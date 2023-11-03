@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% extends 'indexx.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="col-lg-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Basic Table</h4>
+                    <p class="card-description"> Add class <code></code>
+                    </p>
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>City</th>
+                            <th>Zipcode</th>
+                            <th>Mobile</th>
+                          </tr>
+                          {% for i in disp %}
+                        <tr>
+                          <td>{{i.Firstname}}</td>
+                          <td>{{i.Lastname}}</td>
+                          <td>{{i.Email}}</td>
+                          <td>{{i.Address}}</td>
+                          <td>{{i.City}}</td>
+                          <td>{{i.Zipcode}}</td>
+                          <td>{{i.Mobile}}</td>
+                          {% endfor %}
+                        </tr>
+                        </thead>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+</body>
+</html>
+{% endblock %}
